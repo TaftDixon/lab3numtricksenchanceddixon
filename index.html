@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">  
-    <title>Lab 3 -Number Tricks Enchanced Dixon</title>
+    <title>Lab 2 -Number Tricks Dixon</title>
 </head>
 <body>
     <ul>
@@ -27,12 +27,17 @@
         var originalnum = num;
         // magicnum = (((((originalnum + 9) * 2) - 4) / 2) - originalnum); Full Equation
 
-        if (isNaN(num))
+        do 
         {
             alert("That is not a valid number.");
+            entry = prompt("Enter a number, any number: ");
+            entry = parseInt(entry);
+            var num = entry;
+            var magicnum = num;
+            var originalnum = num;
         }
-        else
-        {
+        while (isNaN(num));
+
             magicnum = (num + 9);
             document.getElementById("one").innerHTML = "Add 9 to " + num + " to get " + magicnum;
             num = magicnum;
@@ -51,7 +56,6 @@
             document.write("Your final number is " + magicnum + "!");
 
             alert("The Final Number is: " + magicnum);
-        }
     </script>
 </body>
 </html>
